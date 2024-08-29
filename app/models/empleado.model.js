@@ -34,7 +34,7 @@ module.exports = (sequelize, Sequelize) => {
       id_departamento: {
         type: Sequelize.NUMERIC,
         references: {
-          model: 'DEPARTAMENTO', // Nombre del modelo referenciado
+          model: 'departamento', // Nombre del modelo referenciado
           key: 'id_departamento'
         },
         allowNull: false
