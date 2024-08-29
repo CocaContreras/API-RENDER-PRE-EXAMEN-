@@ -29,5 +29,15 @@ router.get('/api/clientes/onebyid/:id', Cliente.findById);
 router.put('/api/clientes/update/:id', Cliente.update);
 router.delete('/api/clientes/delete/:id', Cliente.delete);
 
+const Proveedor = require('../controllers/proveedor.controller.js');
+
+// Rutas para el controlador de Proveedor
+
+router.post('/api/proveedores/create', Proveedor.create);
+router.get('/api/proveedores/all', Proveedor.findAll);
+router.get('/api/proveedores/onebyid/:id', Proveedor.findById);
+router.put('/api/proveedores/update/:id', Proveedor.update);
+router.delete('/api/proveedores/delete/:id', Proveedor.delete);
+
 
 module.exports = router;
