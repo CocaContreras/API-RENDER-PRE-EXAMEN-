@@ -1,4 +1,4 @@
-module.exports = (Sequelize, SequelizeConfig) => {
+module.exports = (sequelize, Sequelize) => {
     const Cliente = sequelize.define('cliente', {
         id_cliente:{
             autoIncrement: true,
@@ -31,7 +31,7 @@ module.exports = (Sequelize, SequelizeConfig) => {
             type: Sequelize.DATE,
         },
         estatus: {
-            type: Sequelize.INTERGER,
+            type: Sequelize.INTEGER,
         }
     });
 

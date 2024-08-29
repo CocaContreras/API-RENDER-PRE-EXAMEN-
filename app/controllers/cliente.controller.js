@@ -1,3 +1,4 @@
+const db = require('../config/db.config.js');
 const Cliente = db.Cliente;
 
 // Crear un nuevo cliente
