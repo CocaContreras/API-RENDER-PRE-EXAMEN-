@@ -40,7 +40,7 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false
       }
     }, {
-      tableName: 'EMPLEADO',
+      tableName: 'empleado',
       timestamps: false // Desactiva createdAt y updatedAt si no los usas
     });
   
