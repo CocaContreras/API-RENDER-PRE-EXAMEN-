@@ -10,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false
       }
     }, {
-      tableName: 'DEPARTAMENTO',
+      tableName: 'departamento',
       timestamps: false // Si no utilizas createdAt y updatedAt
     });
   
