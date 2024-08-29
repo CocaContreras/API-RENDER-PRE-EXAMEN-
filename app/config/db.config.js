@@ -28,18 +28,7 @@ db.sequelize = sequelize;
 db.Departamento = require('../models/departamento.model.js')(sequelize, Sequelize);
 db.Empleado = require('../models/empleado.model.js')(sequelize, Sequelize);
 
-// Configurar relaciones
-db.Departamento.hasMany(db.Empleado, { foreignKey: 'id_departamento' });
-db.Empleado.belongsTo(db.Departamento, { foreignKey: 'id_departamento' });
 
-// Sincronizar modelos
-sequelize.sync({ force: true })  // Esto eliminará las tablas existentes y las volverá a crear
-  .then(() => {
-    console.log('Database & tables created!');
-  })
-  .catch(error => {
-    console.error('Error syncing database:', error);
-  });
 
 module.exports = db;
 
