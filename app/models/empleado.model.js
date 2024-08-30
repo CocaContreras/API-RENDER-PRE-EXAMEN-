@@ -33,11 +33,14 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: false
     },
     id_departamento: {
-      type: Sequelize.INTEGER, // Solo un campo de tipo entero sin referencia
-      allowNull: false
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'departamento', 
+        key: 'id_departamento' 
+      }
     }
-  }, 
-);
+  });
 
   return Empleado;
 };
