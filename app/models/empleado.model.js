@@ -36,10 +36,8 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.INTEGER, // Solo un campo de tipo entero sin referencia
       allowNull: false
     }
-  }, {
-    tableName: 'empleado',
-    timestamps: false // Desactiva createdAt y updatedAt si no los usas
-  });
+  }, 
+);
 
   return Empleado;
 };

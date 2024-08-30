@@ -10,9 +10,6 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING(80),
       allowNull: false
     }
-  }, {
-    tableName: 'departamento',
-    timestamps: false // Desactiva createdAt y updatedAt si no los usas
   });
 
   return Departamento;
