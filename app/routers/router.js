@@ -50,4 +50,15 @@ router.put('/api/productos/update/:id', Producto.update);
 router.delete('/api/productos/delete/:id', Producto.delete);
 
 
+const Factura = require('../controllers/factura.controller.js');
+
+// Rutas para el controlador de Factura
+
+router.post('/api/facturas/create', Factura.create);
+router.get('/api/facturas/all', Factura.findAll);
+router.get('/api/facturas/onebyid/:id', Factura.findById);
+router.put('/api/facturas/update/:id', Factura.update);
+router.delete('/api/facturas/delete/:id', Factura.delete);
+
+
 module.exports = router;
