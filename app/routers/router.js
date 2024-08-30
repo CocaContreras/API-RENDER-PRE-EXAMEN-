@@ -60,5 +60,14 @@ router.get('/api/facturas/onebyid/:id', Factura.findById);
 router.put('/api/facturas/update/:id', Factura.update);
 router.delete('/api/facturas/delete/:id', Factura.delete);
 
+const Factura_detalle = require('../controllers/factura_detalle.controller.js');
+
+// Rutas para el controlador de Factura_detalle
+
+router.post('/api/factura_detalle/create', Factura_detalle.create);
+router.get('/api/factura_detalle/all', Factura_detalle.findAll);
+router.get('/api/factura_detalle/onebyid/:id', Factura_detalle.findById);
+router.put('/api/factura_detalle/update/:id', Factura_detalle.update);
+router.delete('/api/factura_detalle/delete/:id', Factura_detalle.delete);
 
 module.exports = router;
