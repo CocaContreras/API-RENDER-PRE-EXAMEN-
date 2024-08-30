@@ -39,5 +39,15 @@ router.get('/api/proveedores/onebyid/:id', Proveedor.findById);
 router.put('/api/proveedores/update/:id', Proveedor.update);
 router.delete('/api/proveedores/delete/:id', Proveedor.delete);
 
+const Producto = require('../controllers/producto.controller.js');
+
+// Rutas para el controlador de Producto
+
+router.post('/api/productos/create', Producto.create);
+router.get('/api/productos/all', Producto.findAll);
+router.get('/api/productos/onebyid/:id', Producto.findById);
+router.put('/api/productos/update/:id', Producto.update);
+router.delete('/api/productos/delete/:id', Producto.delete);
+
 
 module.exports = router;
